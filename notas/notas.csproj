@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFA6E7B8-980D-493A-B5B8-C751408C292B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>notas</RootNamespace>
+    <AssemblyName>notas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asignatura.Designer.cs">
+      <DependentUpon>Asignatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD.cs" />
+    <Compile Include="conexion.cs" />
+    <Compile Include="conexion1.cs" />
+    <Compile Include="datosbasedt.cs" />
+    <Compile Include="datosget.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicio.Designer.cs">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pensumDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pensumDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pensumDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pensumDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profesor.Designer.cs">
+      <DependentUpon>profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Asignatura.resx">
+      <DependentUpon>Asignatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicio.resx">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profesor.resx">
+      <DependentUpon>profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="pensumDataSet.xsc">
+      <DependentUpon>pensumDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pensumDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pensumDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pensumDataSet.xss">
+      <DependentUpon>pensumDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pensumDataSet1.xsc">
+      <DependentUpon>pensumDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pensumDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pensumDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pensumDataSet1.xss">
+      <DependentUpon>pensumDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\community_users_12977.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angulo-doble-que-apunta-a-la-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utoons_TV_blue_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adelante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron-apuntando-hacia-la-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron-apuntando-hacia-la-derecha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contorno-de-boton-de-encendido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio-de-una-pagina-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ex\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
